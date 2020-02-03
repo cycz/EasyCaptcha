@@ -34,7 +34,7 @@ print(characters)
 示例：2a3mx_00cf9954da274f1eb91407894902482e.jpg
 '''
 print('==验证码路径==')
-datapath = './pic/jianshe/'
+datapath = 'E:/captcha/alipay'
 print(datapath)
 
 '''
@@ -42,13 +42,13 @@ print(datapath)
 默认5
 '''
 print('==验证码长度==')
-n_len = 5
+n_len = 4
 print(n_len)
 
 '''
 模型保存路径
 '''
-savepath = 'ImmutableCaptcha.h5'
+savepath = 'alipay.h5'
 '''
 以上是必须修改的内容
 下面可根据自己情况修改
@@ -56,14 +56,13 @@ savepath = 'ImmutableCaptcha.h5'
 
 '''
 内存资源丰富可以按实际图片大小来
-图片：宽、高
+图片：宽、高 (高是2的次方)
 '''
-width = 128
-height = 64
+width = 100
+height = 32
 
 '''
 图片色彩通道数
-默认3 如果图片进行灰度处理可以设置为1
 '''
 colorChannel = 3
 
@@ -72,7 +71,7 @@ colorChannel = 3
 成功率不够高可以适当提高轮次
 耗时也会增加
 '''
-epochs = 10
+epochs = 11
 
 '''
 批次数量
@@ -121,12 +120,10 @@ for i, img in enumerate(image_list):
     # 讲图片转为np数组
     X[i] = raw_img
     # 讲标签转换为数组进行保存
+    # print(img)
     y = captcha_to_vec(img.split('_')[0], y, i)
 
 
-def decode(y):
-    y = np.argmax(np.array(y), axis=2)[:, 0]
-    return ''.join([characters[x] for x in y])
 
 #网络搭建、训练过程、保存模型
 input_tensor = Input((height, width, 3))
