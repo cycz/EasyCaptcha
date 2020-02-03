@@ -71,7 +71,7 @@ colorChannel = 3
 成功率不够高可以适当提高轮次
 耗时也会增加
 '''
-epochs = 11
+epochs = 15
 
 '''
 批次数量

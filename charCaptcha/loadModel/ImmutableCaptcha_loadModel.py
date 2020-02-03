@@ -25,7 +25,7 @@ modelpath = '../alipay.h5'
 内存资源丰富可以按实际图片大小来
 图片：宽、高
 '''
-width = 128
+width = 100
 height = 32
 
 '''
