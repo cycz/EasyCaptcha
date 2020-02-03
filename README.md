@@ -44,6 +44,12 @@
 ```
 
 #注意事项
-1、使用gpu 将requirements.txt中的 tensorflow==1.13.1 修改为tensorflow-gpu==1.13.1
+1、使用gpu 将requirements.txt中的 tensorflow 修改为tensorflow-gpu （tensorflow安装问题可以自行百度一下）
 
 2、更多验证码类型持续更新
+
+
+给大家练习的训练集
+
+链接：https://pan.baidu.com/s/1Fxiv5j6eXLcgDOR5G97_lQ 
+提取码：44c8
