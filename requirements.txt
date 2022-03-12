@@ -2,4 +2,4 @@ numpy==1.16.2
 pandas==0.24.2
 tensorflow==1.15.2
 Keras==2.2.4
-pillow==6.2.1
+pillow==9.0.1
